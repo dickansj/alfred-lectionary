@@ -7,7 +7,7 @@ Requires the [Alfred Powerpack](https://www.alfredapp.com/powerpack/) — Script
 ## Install
 
 1. Clone this repo: `git clone git@github.com:dickansj/alfred-lectionary.git ~/alfred-lectionary`
-2. Build the package: `cd ~/alfred-lectionary && zip -X alfred-lectionary.alfredworkflow info.plist resolve.py`
+2. Build the package: `cd ~/alfred-lectionary && zip -X alfred-lectionary.alfredworkflow info.plist resolve.py icon.png`
 3. In Finder, go to `~/alfred-lectionary/` and double-click `alfred-lectionary.alfredworkflow`.
 4. Alfred opens an import dialog — click **Import Workflow**.
 
@@ -38,6 +38,8 @@ press Enter to confirm.
 
 - `resolve.py` — parses the query and prints the Alfred Script Filter JSON
 - `info.plist` — the workflow definition (Script Filter → Open URL)
+- `icon.png` — the workflow's icon
+- `make_icon.py` — one-off script that generated `icon.png`; not part of the workflow itself
 - `alfred-lectionary.alfredworkflow` — the packaged, importable workflow;
   gitignored and not tracked here (see Install step 2 to build it)
 
@@ -47,5 +49,5 @@ After editing `resolve.py` or `info.plist`, repackage with the same command
 from Install step 2:
 
 ```sh
-zip -X alfred-lectionary.alfredworkflow info.plist resolve.py
+zip -X alfred-lectionary.alfredworkflow info.plist resolve.py icon.png
 ```

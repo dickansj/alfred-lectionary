@@ -21,7 +21,7 @@
 		</array>
 	</dict>
 	<key>createdby</key>
-	<string>Joe</string>
+	<string>Joseph Dickan</string>
 	<key>description</key>
 	<string>Open USCCB daily Mass readings and Bible chapter pages</string>
 	<key>disabled</key>
@@ -98,11 +98,11 @@
 		</dict>
 	</array>
 	<key>readme</key>
-	<string>lect                     -> today's USCCB daily readings
-lect 1d                  -> readings N days from today
-lect july 31             -> readings for the next July 31
-lect job 8               -> Job, chapter 8
-lect 1 kgs 13            -> 1 Kings, chapter 13
+	<string>• lect — today's USCCB daily readings
+• lect 1d — readings N days from today
+• lect july 31 — readings for the next July 31
+• lect job 8 — Job, chapter 8
+• lect 1 kgs 13 — 1 Kings, chapter 13
 
 Book names and SBL abbreviations are case-insensitive.</string>
 	<key>uidata</key>
