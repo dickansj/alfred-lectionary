@@ -170,6 +170,6 @@ Hold ⌘ (Cmd) when pressing Enter to copy the URL to the clipboard instead of o
 	<key>version</key>
 	<string>1.1</string>
 	<key>webaddress</key>
-	<string></string>
+	<string>https://github.com/dickansj/alfred-lectionary</string>
 </dict>
 </plist>
