@@ -4,14 +4,15 @@ Alfred workflow for jumping straight to USCCB (bible.usccb.org) pages.
 
 ## Install
 
-1. In Finder, go to this folder (`/Users/joe/Projects/alfred-lectionary/`).
-2. Double-click `alfred-lectionary.alfredworkflow`.
-3. Alfred opens an import dialog — click **Import Workflow**.
+1. Clone this repo: `git clone git@github.com:dickansj/alfred-lectionary.git ~/alfred-lectionary`
+2. Build the package: `cd ~/alfred-lectionary && zip -X alfred-lectionary.alfredworkflow info.plist resolve.py`
+3. In Finder, go to `~/alfred-lectionary/` and double-click `alfred-lectionary.alfredworkflow`.
+4. Alfred opens an import dialog — click **Import Workflow**.
 
 Alfred must already be running for the double-click to trigger the import
-dialog. If you edit `resolve.py` or `info.plist` later, re-run the zip
-command below and re-import — Alfred will offer to overwrite the existing
-"Lectionary" workflow (same `bundleid`), so your changes replace it in place.
+dialog. If you edit `resolve.py` or `info.plist` later, re-run step 2 and
+re-import — Alfred will offer to overwrite the existing "Lectionary"
+workflow (same `bundleid`), so your changes replace it in place.
 
 ## Usage
 
