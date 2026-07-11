@@ -1,7 +1,6 @@
 # alfred-lectionary
 
-Alfred workflow for jumping straight to USCCB (bible.usccb.org) pages.
-
+Alfred workflow for USCCB Bible pages (bible.usccb.org): jump straight to daily Mass readings or any Bible chapter, in the official Catholic lectionary text for the USA.
 ## Install
 
 1. Clone this repo: `git clone git@github.com:dickansj/alfred-lectionary.git ~/alfred-lectionary`
