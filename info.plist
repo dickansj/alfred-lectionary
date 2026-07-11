@@ -18,6 +18,16 @@
 				<key>vitoclose</key>
 				<true/>
 			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>9E4BEA96-B540-46CD-817C-A377FFDEFCF5</string>
+				<key>modifiers</key>
+				<integer>1048576</integer>
+				<key>modifiersubtext</key>
+				<string>Copy this URL to the clipboard instead of opening it</string>
+				<key>vitoclose</key>
+				<true/>
+			</dict>
 		</array>
 	</dict>
 	<key>createdby</key>
@@ -96,30 +106,59 @@
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>9E4BEA96-B540-46CD-817C-A377FFDEFCF5</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string>• lect — today's USCCB daily readings
 • lect 1d — readings N days from today
+• lect sunday — readings for the next Sunday (or today, if today is Sunday)
 • lect july 31 — readings for the next July 31
 • lect job 8 — Job, chapter 8
 • lect 1 kgs 13 — 1 Kings, chapter 13
 
-Book names and SBL abbreviations are case-insensitive.</string>
+Book names and SBL abbreviations are case-insensitive.
+
+Hold ⌘ (Cmd) when pressing Enter to copy the URL to the clipboard instead of opening it in your browser.</string>
 	<key>uidata</key>
 	<dict>
 		<key>7BA8DB4A-FB71-4F86-87BE-BF23E88EAE7F</key>
 		<dict>
 			<key>xpos</key>
-			<real>200</real>
+			<real>200.0</real>
 			<key>ypos</key>
-			<real>200</real>
+			<real>200.0</real>
 		</dict>
 		<key>D8B2B94C-E39B-4CDE-AFA7-4490BDDCBEA5</key>
 		<dict>
 			<key>xpos</key>
-			<real>450</real>
+			<real>450.0</real>
 			<key>ypos</key>
-			<real>200</real>
+			<real>200.0</real>
+		</dict>
+		<key>9E4BEA96-B540-46CD-817C-A377FFDEFCF5</key>
+		<dict>
+			<key>xpos</key>
+			<real>450.0</real>
+			<key>ypos</key>
+			<real>330.0</real>
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>
@@ -129,7 +168,7 @@ Book names and SBL abbreviations are case-insensitive.</string>
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>1.0</string>
+	<string>1.1</string>
 	<key>webaddress</key>
 	<string></string>
 </dict>

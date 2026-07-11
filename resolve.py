@@ -21,6 +21,16 @@ MONTHS = {
     "december": 12, "dec": 12,
 }
 
+WEEKDAYS = {
+    "monday": 0, "mon": 0,
+    "tuesday": 1, "tue": 1, "tues": 1,
+    "wednesday": 2, "wed": 2,
+    "thursday": 3, "thu": 3, "thur": 3, "thurs": 3,
+    "friday": 4, "fri": 4,
+    "saturday": 5, "sat": 5,
+    "sunday": 6, "sun": 6,
+}
+
 # (usccb slug, display name, extra aliases: SBL abbreviations + alternate full names)
 BOOKS = [
     ("genesis", "Genesis", ["Gen"]),
@@ -168,6 +178,16 @@ def resolve(query):
             reading_url(d),
         )
 
+    if len(tokens) == 1 and tokens[0].lower() in WEEKDAYS:
+        today = date.today()
+        offset = (WEEKDAYS[tokens[0].lower()] - today.weekday()) % 7
+        d = today + timedelta(days=offset)
+        return item(
+            "Open Readings for {}".format(d.strftime("%A, %B %-d, %Y")),
+            "USCCB Daily Mass Readings",
+            reading_url(d),
+        )
+
     if len(tokens) == 2 and tokens[0].lower() in MONTHS:
         day_match = re.fullmatch(r"(\d{1,2})(?:st|nd|rd|th)?", tokens[1], re.IGNORECASE)
         if day_match:
@@ -205,7 +225,7 @@ def resolve(query):
 
     return item(
         "No match for \"{}\"".format(query),
-        'Try nothing (today), "5d" (5 days ahead), "july 31", or "job 8"',
+        'Try nothing (today), "5d" (5 days ahead), "sunday", "july 31", or "job 8"',
         valid=False,
     )
 

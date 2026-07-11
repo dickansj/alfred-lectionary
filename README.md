@@ -22,9 +22,13 @@ workflow (same `bundleid`), so your changes replace it in place.
 |---|---|
 | `lect` | Today's daily Mass readings |
 | `lect 5d` | Readings 5 days from today |
+| `lect sunday` | Readings for the next Sunday (today, if today is Sunday) |
 | `lect july 31` | Readings for the next July 31 (rolls to next year if already passed) |
 | `lect job 8` | Job, chapter 8 |
 | `lect 1 kgs 13` | 1 Kings, chapter 13 |
+
+Any weekday name or abbreviation works (`monday`/`mon`, `tuesday`/`tue`, etc.),
+resolved the same way as `sunday` above.
 
 Book names and SBL abbreviations (Society of Biblical Literature style,
 e.g. `1 Kgs`, `Isa`) are case-insensitive. All 73 books on
@@ -32,7 +36,8 @@ USCCB's Bible pages are supported (including Tobit, Judith, 1-2 Maccabees,
 Wisdom, Sirach, and Baruch).
 
 Alfred shows a preview of the resolved title before opening anything —
-press Enter to confirm.
+press Enter to open it in your browser, or hold **⌘ (Cmd)** and press Enter
+to copy the URL to the clipboard instead.
 
 ## Files
 
