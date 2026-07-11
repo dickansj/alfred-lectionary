@@ -33,11 +33,13 @@ right_page = [spine_top, (SIZE - 128, 148), (SIZE - 108, 372), spine_bottom]
 draw.polygon(left_page, fill=PAGE)
 draw.polygon(right_page, fill=PAGE)
 
-# faint text lines on each page
+# faint text lines on each page, rising toward the outer edge to match
+# the page silhouette (outer corners are higher than the spine)
 for i, y in enumerate((210, 240, 270, 300, 330)):
     inset = i * 2
-    draw.line([(150 + inset, y), (238, y - (i * 6))], fill=LINE, width=4)
-    draw.line([(274, y - (i * 6)), (362 - inset, y)], fill=LINE, width=4)
+    slant = i * 6
+    draw.line([(150 + inset, y - slant), (238, y)], fill=LINE, width=4)
+    draw.line([(274, y), (362 - inset, y - slant)], fill=LINE, width=4)
 
 draw.line([spine_top, spine_bottom], fill=SPINE, width=6)
 
