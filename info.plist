@@ -16,7 +16,7 @@
 				<key>modifiersubtext</key>
 				<string></string>
 				<key>vitoclose</key>
-				<true/>
+				<false/>
 			</dict>
 			<dict>
 				<key>destinationuid</key>
@@ -26,7 +26,7 @@
 				<key>modifiersubtext</key>
 				<string>Copy this URL to the clipboard instead of opening it</string>
 				<key>vitoclose</key>
-				<true/>
+				<false/>
 			</dict>
 		</array>
 	</dict>
