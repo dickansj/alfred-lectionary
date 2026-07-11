@@ -1,6 +1,9 @@
 # alfred-lectionary
 
 Alfred workflow for USCCB Bible pages (bible.usccb.org): jump straight to daily Mass readings or any Bible chapter, in the official Catholic lectionary text for the USA.
+
+Requires the [Alfred Powerpack](https://www.alfredapp.com/powerpack/) — Script Filters (which this workflow uses) aren't available in the free version of Alfred.
+
 ## Install
 
 1. Clone this repo: `git clone git@github.com:dickansj/alfred-lectionary.git ~/alfred-lectionary`
@@ -23,7 +26,8 @@ workflow (same `bundleid`), so your changes replace it in place.
 | `lect job 8` | Job, chapter 8 |
 | `lect 1 kgs 13` | 1 Kings, chapter 13 |
 
-Book names and SBL abbreviations are case-insensitive. All 73 books on
+Book names and SBL abbreviations (Society of Biblical Literature style,
+e.g. `1 Kgs`, `Isa`) are case-insensitive. All 73 books on
 USCCB's Bible pages are supported (including Tobit, Judith, 1-2 Maccabees,
 Wisdom, Sirach, and Baruch).
 
@@ -34,11 +38,13 @@ press Enter to confirm.
 
 - `resolve.py` — parses the query and prints the Alfred Script Filter JSON
 - `info.plist` — the workflow definition (Script Filter → Open URL)
-- `alfred-lectionary.alfredworkflow` — the packaged, importable workflow
+- `alfred-lectionary.alfredworkflow` — the packaged, importable workflow;
+  gitignored and not tracked here (see Install step 2 to build it)
 
 ## Rebuilding the package
 
-After editing `resolve.py` or `info.plist`, repackage with:
+After editing `resolve.py` or `info.plist`, repackage with the same command
+from Install step 2:
 
 ```sh
 zip -X alfred-lectionary.alfredworkflow info.plist resolve.py
